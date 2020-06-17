@@ -11,9 +11,9 @@ class UserSerializer(serializers.ModelSerializer):
     def create(self, validated_data):
         user = User.objects.create_user(**validated_data)
         return user
-        
+
 
 class TreasuryYieldSerializer(serializers.ModelSerializer):
     class Meta:
         model = Treasury_Yield
-        fields = ('bondName', 'couponRate', 'bondPrice', 'bondYield')
+        fields = ('id', 'bondName', 'couponRate', 'bondPrice', 'bondYield')
