@@ -2,11 +2,21 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from rest_framework import viewsets
 from .models import Treasury_Yield
-from .serializers import TreasuryYieldSerializer
+from .serializers import TreasuryYieldSerializer, UserSerializer
+from rest_framework.authentication import TokenAuthentication
+from django.contrib.auth.models import User
+
 
 class TreasuryYieldViewSet(viewsets.ModelViewSet):
     queryset = Treasury_Yield.objects.all()
     serializer_class = TreasuryYieldSerializer
+    authentication_classes =(TokenAuthentication,)
+
+class UserViewSet(viewsets.ModelViewSet):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+    # authentication_classes =(TokenAuthentication,)
+
 # Create your views here.
 
 

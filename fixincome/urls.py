@@ -19,11 +19,13 @@ from django.urls import path
 from . import views
 from rest_framework import routers
 from django.conf.urls import include
-from .views import TreasuryYieldViewSet
+from .views import TreasuryYieldViewSet, UserViewSet
 
 router = routers.DefaultRouter()
 
+router.register('users',UserViewSet)
 router.register('apibond',TreasuryYieldViewSet)
+
 urlpatterns = [
     path('', include(router.urls)),
 
