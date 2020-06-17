@@ -37,7 +37,6 @@ SECRET_KEY = '=%fhngx#u6y7f(2jtjan(c2n1f$_a7f_wayczfi+4533f1a%&v'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
 ALLOWED_HOSTS = ['djangoappjson.herokuapp.com']
 
 
@@ -50,6 +49,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'fixincome',
 ]
 
 MIDDLEWARE = [
@@ -134,4 +135,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-django_on_heroku.settings(locals())
+# django_on_heroku.settings(locals())
