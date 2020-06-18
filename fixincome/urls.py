@@ -23,7 +23,7 @@ from .views import TreasuryYieldViewSet, UserViewSet
 
 router = routers.DefaultRouter()
 
-router.register('users',UserViewSet)
+#router.register('users',UserViewSet)
 router.register('apibond',TreasuryYieldViewSet)
 
 urlpatterns = [
