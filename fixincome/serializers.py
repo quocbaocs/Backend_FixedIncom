@@ -16,4 +16,5 @@ class UserSerializer(serializers.ModelSerializer):
 class TreasuryYieldSerializer(serializers.ModelSerializer):
     class Meta:
         model = Treasury_Yield
-        fields = ('id', 'bondName', 'couponRate', 'bondPrice', 'bondYield')
+        fields = ('id','asset_code','name','maturity','issuedate','couponrate','price','yeild')
+        #fields = ('id', 'bondName', 'couponRate', 'bondPrice', 'bondYield')
